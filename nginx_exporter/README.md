@@ -6,7 +6,7 @@ This project sets up monitoring for multiple Nginx instances using Prometheus an
 ## Components
 
 - Nginx 1.18.0 with Nginx Exporter
-- Nginx 1.25.2 with Nginx Exporter 
+- Nginx 1.25.2 with Nginx Exporter
 - Prometheus for metrics collection
 - Grafana for visualization
 - Nginx Exporters to expose Nginx metrics
@@ -25,10 +25,10 @@ This project sets up monitoring for multiple Nginx instances using Prometheus an
    ```
 
 2. Access the services:
-   - Nginx 1.18.0: http://localhost:8080
-   - Nginx 1.25.2: http://localhost:8081 
-   - Prometheus: http://localhost:9090
-   - Grafana: http://localhost:3000
+   - Nginx 1.18.0: <http://localhost:8080>
+   - Nginx 1.25.2: <http://localhost:8081>
+   - Prometheus: <http://localhost:9090>
+   - Grafana: <http://localhost:3000>
      - Default credentials:
        - Username: admin
        - Password: admin
