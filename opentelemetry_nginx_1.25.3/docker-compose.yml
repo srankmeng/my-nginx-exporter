@@ -20,3 +20,22 @@ services:
       - ./nginx/index.html:/usr/share/nginx/html/index.html
     ports:
       - 8080:80
+
+  backend:
+    build: ./backend
+    environment:
+      - OTEL_TRACES_EXPORTER=otlp
+      - OTEL_METRICS_EXPORTER=none
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://collector:4318/
+      - OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
+      - OTEL_SERVICE_NAME=backend
+
+  frontend:
+    build: ./frontend
+    ports:
+      - '8000:8000'
+    environment:
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://collector:4318/
+      - OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
+      - OTEL_SERVICE_NAME=frontend
+    

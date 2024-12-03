@@ -60,3 +60,5 @@ docker compose up
 
 - nginx: <http://localhost:8080>
 - jaeger: <http://localhost:16686>
+
+trace name module reference <https://nginx.org/en/docs/>
